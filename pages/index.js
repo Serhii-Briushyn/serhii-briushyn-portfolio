@@ -37,9 +37,9 @@ const Home = () => {
             exit="hidden"
             className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
-            nostrum quam reprehenderit vero, tenetur voluptatem nulla aut
-            aspernatur dolores ut.
+            Full-stack developer with expertise in creating dynamic,
+            user-centric applications. Let&apos;s bring your vision to life
+            through innovative, scalable solutions.
           </motion.p>
           {/* btn */}
           <div className="flex justify-center xl:hidden relative">
@@ -57,7 +57,7 @@ const Home = () => {
         </div>
       </div>
       {/* image */}
-      <div className="w-[1200px] h-full absolute right-0 bottom-0">
+      <div className="w-full h-full absolute right-0 bottom-0">
         {/* bg img */}
         <div className="bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0"></div>
         {/* particles */}

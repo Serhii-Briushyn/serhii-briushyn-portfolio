@@ -10,17 +10,27 @@ import { useRouter } from "next/router";
 // framer motion
 import { AnimatePresence, motion } from "framer-motion";
 
+// title
+import Head from "next/head";
+
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
   return (
-    <Layout>
-      <AnimatePresence mode="wait">
-        <motion.div key={router.route} className="h-full">
-          <Transition />
-          <Component {...pageProps} />
-        </motion.div>
-      </AnimatePresence>
-    </Layout>
+    <>
+      <Head>
+        <link rel="icon" href="/favicon32.png" type="image/png" sizes="32x32" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Serhii Briushyn</title>
+      </Head>
+      <Layout>
+        <AnimatePresence mode="wait">
+          <motion.div key={router.route} className="h-full">
+            <Transition />
+            <Component {...pageProps} />
+          </motion.div>
+        </AnimatePresence>
+      </Layout>
+    </>
   );
 }
 
