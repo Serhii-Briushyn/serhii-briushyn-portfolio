@@ -27,8 +27,9 @@ const Services = () => {
               exit="hidden"
               className="mb-4 max-w-[400px] mx-auto lg:mx-0"
             >
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. A
-              eveniet dignissimos distinctio tempore harum laudantium.
+              I offer a full range of services to create and develop your online
+              project. My goal is to provide you with solutions that work
+              efficiently and capture attention.
             </motion.p>
           </div>
 

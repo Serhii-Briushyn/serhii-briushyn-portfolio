@@ -224,7 +224,7 @@ const About = () => {
                   className="flex-1 flex flex-col md:flex-row max-w-max items-center text-white/60"
                 >
                   <div className="font-light mb-2 md:mb-0">{item.text}</div>
-                  <div className="flex gap-x-4">
+                  <div className="flex gap-x-4 flex-wrap">
                     {item.icons?.map((icon) => {
                       return (
                         <div key={nanoid()} className="text-2xl text-white/60">
