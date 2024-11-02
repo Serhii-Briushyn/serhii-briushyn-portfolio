@@ -1,59 +1,83 @@
 import React, { useState } from "react";
 import { nanoid } from "nanoid";
 
-// icons
-import {
-  FaHtml5,
-  FaCss3,
-  FaJs,
-  FaReact,
-  FaWordpress,
-  FaFigma,
-} from "react-icons/fa";
 import {
   SiNextdotjs,
-  SiFramer,
-  SiAdobexd,
-  SiAdobephotoshop,
+  SiRedux,
+  SiTypescript,
+  SiMysql,
+  SiExpress,
+  SiMongodb,
+  SiSwagger,
+  SiVercel,
+  SiPostman,
+  SiEslint,
+  SiPrettier,
+  SiGit,
+  SiGithub,
+  SiFigma,
+  SiCss3,
+  SiHtml5,
+  SiJavascript,
+  SiReact,
+  SiVuedotjs,
+  SiVite,
+  SiStyledcomponents,
+  SiMui,
+  SiTailwindcss,
+  SiReactrouter,
+  SiAxios,
 } from "react-icons/si";
 
-// about data
+import { FaNode } from "react-icons/fa";
+import { TbBrandReactNative } from "react-icons/tb";
+
 export const aboutData = [
   {
     title: "skills",
     info: [
       {
-        title: "Web Development",
         icons: [
-          <FaHtml5 key={nanoid()} />,
-          <FaCss3 key={nanoid()} />,
-          <FaJs key={nanoid()} />,
-          <FaReact key={nanoid()} />,
-          <SiNextdotjs key={nanoid()} />,
-          <SiFramer key={nanoid()} />,
-          <FaWordpress key={nanoid()} />,
+          <SiReact key={nanoid()} title="React" />,
+          <SiRedux key={nanoid()} title="Redux" />,
+          <SiJavascript key={nanoid()} title="JavaScript" />,
+          <SiTypescript key={nanoid()} title="TypeScript" />,
+          <SiHtml5 key={nanoid()} title="HTML5" />,
+          <SiCss3 key={nanoid()} title="CSS3" />,
+          <SiVuedotjs key={nanoid()} title="Vue.js" />,
+          <SiNextdotjs key={nanoid()} title="Next.js" />,
+          <TbBrandReactNative key={nanoid()} title="React Native" />,
         ],
       },
       {
-        title: "UI/UX Design",
         icons: [
-          <FaFigma key={nanoid()} />,
-          <SiAdobexd key={nanoid()} />,
-          <SiAdobephotoshop key={nanoid()} />,
+          <FaNode key={nanoid()} title="Node.js" />,
+          <SiMysql key={nanoid()} title="MySQL" />,
+          <SiExpress key={nanoid()} title="Express" />,
+          <SiMongodb key={nanoid()} title="MongoDB" />,
+          <SiSwagger key={nanoid()} title="Swagger" />,
         ],
       },
-    ],
-  },
-  {
-    title: "awards",
-    info: [
       {
-        title: "Webby Awards - Honoree",
-        stage: "2011 - 2012",
+        icons: [
+          <SiGit key={nanoid()} title="Git" />,
+          <SiGithub key={nanoid()} title="GitHub" />,
+          <SiVercel key={nanoid()} title="Vercel" />,
+          <SiVite key={nanoid()} title="Vite" />,
+          <SiFigma key={nanoid()} title="Figma" />,
+          <SiPostman key={nanoid()} title="Postman" />,
+          <SiEslint key={nanoid()} title="ESLint" />,
+          <SiPrettier key={nanoid()} title="Prettier" />,
+        ],
       },
       {
-        title: "Adobe Design Achievement Awards - Finalist",
-        stage: "2009 - 2010",
+        icons: [
+          <SiMui key={nanoid()} title="Material-UI" />,
+          <SiTailwindcss key={nanoid()} title="Tailwind CSS" />,
+          <SiReactrouter key={nanoid()} title="React Router" />,
+          <SiAxios key={nanoid()} title="Axios" />,
+          <SiStyledcomponents key={nanoid()} title="Styled Components" />,
+        ],
       },
     ],
   },
@@ -61,47 +85,32 @@ export const aboutData = [
     title: "experience",
     info: [
       {
-        title: "UX/UI Designer - XYZ Company",
-        stage: "2012 - 2023",
+        text: "Truck Driver - BoBo | 2017 - Present",
       },
       {
-        title: "Web Developer - ABC Agency",
-        stage: "2010 - 2012",
-      },
-      {
-        title: "Intern - DEF Corporation",
-        stage: "2008 - 2010",
+        text: "Head of Mechanics Departmen - Mine Shakhterskaya-Glubokaya | 2013 - 2017 ",
       },
     ],
   },
   {
-    title: "credentials",
+    title: "education",
     info: [
       {
-        title: "Web Development - ABC University, LA, CA",
-        stage: "2011",
+        text: "Fullstack Developer - IT School GoIT | 2024 - 2025",
       },
       {
-        title: "Computer Science Diploma - AV Technical Institute",
-        stage: "2009",
-      },
-      {
-        title: "Certified Graphic Designer - ABC Institute, Los Angeles, CA",
-        stage: "2006",
+        text: "Mining Electromechanical Technician - Mining Technical College of Torez | 2007 - 2010",
       },
     ],
   },
 ];
 
-// components
 import Avatar from "../../components/Avatar";
 import Circles from "../../components/Circles";
 
-// framer motion
 import { motion } from "framer-motion";
 import { fadeIn } from "../../variants";
 
-// counter
 import CountUp from "react-countup";
 
 const About = () => {
@@ -109,7 +118,6 @@ const About = () => {
   return (
     <div className="h-full bg-primary/30 py-32 text-center xl:text-left">
       <Circles />
-      {/* avatar img */}
       <motion.div
         variants={fadeIn("right", 0.2)}
         initial="hidden"
@@ -120,7 +128,6 @@ const About = () => {
         <Avatar />
       </motion.div>
       <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
-        {/* text */}
         <div className="flex-1 flex flex-col justify-center">
           <motion.h2
             variants={fadeIn("right", 0.2)}
@@ -129,8 +136,8 @@ const About = () => {
             exit="hidden"
             className="h2"
           >
-            Captivating <span className="text-accent">stories</span> birth
-            magnificent designs.
+            Captivating <span className="text-accent">stories</span> crafted
+            into digital experiences.
           </motion.h2>
           <motion.p
             variants={fadeIn("right", 0.4)}
@@ -139,11 +146,12 @@ const About = () => {
             exit="hidden"
             className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
           >
-            10 years ago, I began freelancing as a developer. Since then,
-            I&apos;ve done remote work for agencies, consulted for startups, and
-            collaborated on digital products for business and consumer use.
+            One year ago, I began pursuing my dream of becoming a developer.
+            Since then, I have not only gained programming skills but also
+            actively participated in team projects, where I took on the roles of
+            team leader and Scrum master. My goal is to create innovative and
+            functional digital products that bring value and inspire.
           </motion.p>
-          {/* counters */}
           <motion.div
             variants={fadeIn("right", 0.6)}
             initial="hidden"
@@ -152,46 +160,41 @@ const About = () => {
             className="hidden md:flex md:max-w-xl xl:max-w-none mx-auto xl:mx-0 mb-8"
           >
             <div className="flex flex-1 xl:gap-x-6">
-              {/* experience */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={10} duration={5} /> +
+                  <CountUp start={0} end={1} duration={5} /> +
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Years of experience
                 </div>
               </div>
-              {/* clients */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={250} duration={5} /> +
+                  <CountUp start={0} end={5} duration={5} />
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Satisfied clients
+                  Completed projects
                 </div>
               </div>
-              {/* projects */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={650} duration={5} /> +
+                  <CountUp start={0} end={3} duration={5} />
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Finished projects
+                  Individual projects
                 </div>
               </div>
-              {/* awards */}
               <div className="relative flex-1">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={8} duration={5} /> +
+                  <CountUp start={0} end={2} duration={5} />
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Winning awards
+                  Team projects
                 </div>
               </div>
             </div>
           </motion.div>
         </div>
-        {/* info */}
         <motion.div
           variants={fadeIn("left", 0.4)}
           initial="hidden"
@@ -220,17 +223,13 @@ const About = () => {
               return (
                 <div
                   key={nanoid()}
-                  className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60"
+                  className="flex-1 flex flex-col md:flex-row max-w-max items-center text-white/60"
                 >
-                  {/* title */}
-                  <div className="font-light mb-2 md:mb-0">{item.title}</div>
-                  <div className="hidden md:flex">-</div>
-                  <div>{item.stage}</div>
+                  <div className="font-light mb-2 md:mb-0">{item.text}</div>
                   <div className="flex gap-x-4">
-                    {/* icons */}
                     {item.icons?.map((icon) => {
                       return (
-                        <div key={nanoid()} className="text-2xl text-white">
+                        <div key={nanoid()} className="text-2xl text-white/60">
                           {icon}
                         </div>
                       );

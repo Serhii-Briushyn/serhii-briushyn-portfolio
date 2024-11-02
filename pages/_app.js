@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <link rel="icon" href="/favicon32.png" type="image/png" sizes="32x32" />
+        <link rel="icon" href="/favicon4.png" type="image/png" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Serhii Briushyn</title>
       </Head>
