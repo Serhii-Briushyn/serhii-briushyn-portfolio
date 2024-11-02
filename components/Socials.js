@@ -1,7 +1,4 @@
-// links
 import Link from "next/link";
-
-// icons
 import {
   RiLinkedinLine,
   RiTelegramLine,

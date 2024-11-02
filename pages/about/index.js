@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { nanoid } from "nanoid";
-
 import {
   SiNextdotjs,
   SiRedux,
@@ -28,7 +27,6 @@ import {
   SiReactrouter,
   SiAxios,
 } from "react-icons/si";
-
 import { FaNode } from "react-icons/fa";
 import { TbBrandReactNative } from "react-icons/tb";
 

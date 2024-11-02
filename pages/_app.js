@@ -1,16 +1,8 @@
 import "../styles/globals.css";
-
-// components
 import Layout from "../components/Layout";
 import Transition from "../components/Transition";
-
-// router
 import { useRouter } from "next/router";
-
-// framer motion
 import { AnimatePresence, motion } from "framer-motion";
-
-// title
 import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {

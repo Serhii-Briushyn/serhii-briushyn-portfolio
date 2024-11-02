@@ -1,9 +1,6 @@
-// components
 import ServiceSlider from "../../components/ServiceSlider";
 import Bulb from "../../components/Bulb";
 import Circles from "../../components/Circles";
-
-// framer motion
 import { motion } from "framer-motion";
 import { fadeIn } from "../../variants";
 
@@ -13,7 +10,6 @@ const Services = () => {
       <Circles />
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row gap-x-8">
-          {/* text */}
           <div className="text-center flex xl:w-[30vw] flex-col lg:text-left mb-4 xl:mb-0">
             <motion.h2
               variants={fadeIn("up", 0.2)}
@@ -36,7 +32,6 @@ const Services = () => {
             </motion.p>
           </div>
 
-          {/* slider */}
           <motion.div
             variants={fadeIn("down", 0.6)}
             initial="hidden"
