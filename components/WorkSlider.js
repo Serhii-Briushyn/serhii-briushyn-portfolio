@@ -11,40 +11,48 @@ export const workSlider = {
     {
       images: [
         {
-          title: "title",
-          path: "/thumb1.jpg",
+          title: "Portfolio",
+          path: "/project-portfolio.jpg",
+          url: "https://serhii-briushyn.github.io/js-team-project-09/",
         },
         {
-          title: "title",
-          path: "/thumb2.jpg",
+          title: "PhoneBook",
+          path: "/project-phone-book.jpg",
+          url: "https://goit-react-hw-08-serhii-briushyn.vercel.app/",
         },
         {
-          title: "title",
-          path: "/thumb3.jpg",
+          title: "Image Search",
+          path: "/project-image-search.jpg",
+          url: "https://goit-typescript-hw-02-serhii-briushyn.vercel.app/",
         },
         {
-          title: "title",
-          path: "/thumb4.jpg",
+          title: "FilmQuest",
+          path: "/project-film-quest.jpg",
+          url: "https://goit-react-hw-05-serhii-briushyn.vercel.app/",
         },
       ],
     },
     {
       images: [
         {
-          title: "title",
-          path: "/thumb4.jpg",
+          title: "WatchCharm",
+          path: "/project-watch-charm.jpg",
+          url: "https://natasmol.github.io/team-number-16/",
         },
         {
-          title: "title",
-          path: "/thumb1.jpg",
+          title: "WebStudio",
+          path: "/project-web-studio.jpg",
+          url: "https://serhii-briushyn.github.io/goit-markup-hw-06/",
         },
         {
-          title: "title",
-          path: "/thumb2.jpg",
+          title: "My portfolio",
+          path: "/project-my-portfolio.jpg",
+          url: "https://serhii-briushyn-portfolio.vercel.app/",
         },
         {
-          title: "title",
-          path: "/thumb3.jpg",
+          title: "ForexFinder",
+          path: "/project-forex-finder.jpg",
+          url: "https://react-blended-5-eosin.vercel.app/",
         },
       ],
     },
@@ -67,12 +75,19 @@ const WorkSlider = () => {
             <div className="grid grid-cols-2 grid-rows-2 gap-4 cursor-pointer">
               {slide.images.map((image, index) => {
                 return (
-                  <div
-                    className="relative rounded-lg overflow-hidden flex items-center justify-center group"
+                  <a
+                    href={image.url}
+                    target="_blank"
                     key={index}
+                    className="relative rounded-lg overflow-hidden flex items-center justify-center group"
                   >
                     <div className="flex items-center justify-center relative overflow-hidden group">
-                      <Image src={image.path} width={500} height={300} alt="" />
+                      <Image
+                        src={image.path}
+                        width={500}
+                        height={300}
+                        alt={image.title}
+                      />
                       <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#e838cc] to-[#4a22bd] opacity-0 group-hover:opacity-80 transition-all duration-700"></div>
                       <div className="absolute bottom-0 translate-y-full group-hover:-translate-y-10 group-hover:xl:-translate-y-20 transition-all duration-300">
                         <div className="flex items-center gap-x-2 text-[13px] tracking-[0.2em]">
@@ -86,7 +101,7 @@ const WorkSlider = () => {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </a>
                 );
               })}
             </div>
