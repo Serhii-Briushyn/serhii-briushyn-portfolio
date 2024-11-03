@@ -111,7 +111,7 @@ export const aboutData = [
 const About = () => {
   const [index, setIndex] = useState(0);
   return (
-    <div className="h-full bg-primary/30 pt-32 pb-20 xl:py-36 text-center xl:text-left">
+    <div className="h-full bg-primary/30 pt-32 pb-32 xl:py-36 text-center xl:text-left">
       <Circles />
       <motion.div
         variants={fadeIn("right", 0.2)}
