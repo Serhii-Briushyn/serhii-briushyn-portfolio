@@ -53,11 +53,13 @@
   }
 }
 
-.hide-scrollbar {
-  overflow-y: auto;
-  scrollbar-width: none;
-}
+@media (max-width: 1200px) {
+  .hide-scrollbar {
+    overflow-y: auto;
+    scrollbar-width: none;
+  }
 
-.hide-scrollbar::-webkit-scrollbar {
-  display: none;
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
 }
