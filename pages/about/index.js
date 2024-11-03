@@ -1,3 +1,8 @@
+import Avatar from "../../components/Avatar";
+import Circles from "../../components/Circles";
+import { motion } from "framer-motion";
+import { fadeIn } from "../../variants";
+import CountUp from "react-countup";
 import React, { useState } from "react";
 import { nanoid } from "nanoid";
 import {
@@ -103,18 +108,10 @@ export const aboutData = [
   },
 ];
 
-import Avatar from "../../components/Avatar";
-import Circles from "../../components/Circles";
-
-import { motion } from "framer-motion";
-import { fadeIn } from "../../variants";
-
-import CountUp from "react-countup";
-
 const About = () => {
   const [index, setIndex] = useState(0);
   return (
-    <div className="h-full bg-primary/30 py-32 text-center xl:text-left">
+    <div className="h-full bg-primary/30 pt-32 pb-20 text-center xl:text-left">
       <Circles />
       <motion.div
         variants={fadeIn("right", 0.2)}
