@@ -48,6 +48,9 @@
   .textarea {
     @apply w-full h-[180px] p-6 rounded-lg resize-none;
   }
+  .pb-safe {
+    padding-bottom: calc(5rem + env(safe-area-inset-bottom));
+  }
 }
 
 .hide-scrollbar {
