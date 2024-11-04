@@ -4,14 +4,21 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
-
-    // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     container: {
+      center: true,
       padding: {
         DEFAULT: "15px",
+        sm: "20px",
+        md: "24px",
+        lg: "32px",
+        xl: "48px",
+        "2xl": "52px",
+        "3xl": "76px",
+        "4xl": "136px",
+        "5xl": "160px",
       },
     },
     screens: {
@@ -20,7 +27,11 @@ module.exports = {
       sm: "640px",
       md: "768px",
       lg: "960px",
-      xl: "1200px",
+      xl: "1366px",
+      "2xl": "1600px",
+      "3xl": "1920px",
+      "4xl": "2560px",
+      "5xl": "3840px",
     },
     extend: {
       colors: {
@@ -43,8 +54,17 @@ module.exports = {
     },
   },
   container: {
+    center: true,
     padding: {
       DEFAULT: "15px",
+      sm: "20px",
+      md: "24px",
+      lg: "32px",
+      xl: "40px",
+      "2xl": "48px",
+      "3xl": "56px",
+      "4xl": "76px",
+      "5xl": "96px",
     },
   },
   plugins: [require("tailwind-scrollbar")],

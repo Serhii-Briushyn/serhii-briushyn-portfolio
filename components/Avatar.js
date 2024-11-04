@@ -5,9 +5,9 @@ const Avatar = () => {
     <div className="hidden xl:flex xl:max-w-none">
       <Image
         src={"/avatar.png"}
-        width={737}
-        height={678}
-        alt=""
+        alt="Photo Serhii"
+        fill
+        style={{ objectFit: "contain" }}
         className="translate-z-0 w-full h-full"
       />
     </div>
