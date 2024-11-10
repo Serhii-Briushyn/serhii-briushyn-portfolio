@@ -2,13 +2,13 @@ import Image from "next/image";
 
 const Avatar = () => {
   return (
-    <div className="hidden xl:flex xl:max-w-none">
+    <div className="hidden xl:flex w-full h-auto">
       <Image
-        src={"/avatar.png"}
+        src="/avatar.png"
         alt="Photo Serhii"
-        fill
-        style={{ objectFit: "contain" }}
-        className="translate-z-0 w-full h-full"
+        width={1474}
+        height={1356}
+        className="translate-z-0 w-full h-auto"
       />
     </div>
   );

@@ -9,7 +9,7 @@ import {
 
 const Socials = () => {
   return (
-    <div className="flex items-center gap-x-5 text-lg">
+    <div className="flex items-center gap-x-5 xl:gap-x-7 2xl:gap-x-8 3xl:gap-x-10 4xl:gap-x-14 5xl:gap-x-20 text-xl xl:text-[1.5vw] xl:leading-normal">
       <Link
         href="https://www.linkedin.com/in/serhii-briushyn/"
         className="hover:text-accent transition-all duration-300"

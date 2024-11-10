@@ -25,31 +25,18 @@
   .page {
     @apply w-full h-dvh overflow-hidden;
   }
-  .h1 {
-    @apply text-[35px] leading-tight mb-8 font-semibold md:text-[60px] md:leading-[1.3] lg:text-[70px] xl:text-[60px] 2xl:text-[75px] 3xl:text-[85px] 4xl:text-[100px] 5xl:text-[160px];
-  }
-  .h2 {
-    @apply text-[35px] leading-tight md:text-[54px] md:leading-[1.3] mb-4 font-semibold;
-  }
-  p {
-    @apply leading-[1.8] text-white/60 font-light;
-  }
-  .description {
-    @apply text-[16px] md:text-[18px] lg:text-[20px] xl:text-[18px] 2xl:text-[22px] 3xl:text-[22px] 4xl:text-[24px] 5xl:text-[40px];
-  }
-  .btn,
-  .input {
-    @apply h-[52px];
+  .btn {
+    @apply h-[52px] 4xl:h-[62px] 5xl:h-[112px] text-sm sm:text-lg xl:text-[1vw] xl:leading-[1.8];
   }
   .input {
-    @apply w-full h-[52px] rounded-lg pl-6;
+    @apply w-full h-[52px] 4xl:h-[72px] 5xl:h-[112px] rounded-lg pl-6 text-sm sm:text-lg xl:text-[1vw] xl:leading-[1.8];
   }
   .input,
   .textarea {
     @apply bg-transparent outline-none focus:ring-1 focus:ring-accent border border-white/20 placeholder:text-white/30 placeholder:font-light;
   }
   .textarea {
-    @apply w-full h-[180px] p-6 rounded-lg resize-none;
+    @apply w-full h-[180px] 4xl:h-[240px] 5xl:h-[340px] p-6 rounded-lg resize-none text-sm sm:text-lg xl:text-[1vw] xl:leading-[1.8];
   }
 }
 
@@ -60,4 +47,22 @@
 
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
+}
+
+input:-webkit-autofill {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+@media (min-width: 640px) {
+  input:-webkit-autofill {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+@media (min-width: 1280px) {
+  input:-webkit-autofill {
+    font-size: 1vw;
+    line-height: 1.8;
+  }
 }

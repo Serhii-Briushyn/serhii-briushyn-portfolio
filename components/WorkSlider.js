@@ -2,7 +2,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
-import { Pagination } from "swiper";
+import "swiper/css/mousewheel";
+import { Pagination, Mousewheel } from "swiper";
 import { BsArrowRight } from "react-icons/bs";
 import Image from "next/image";
 
@@ -63,16 +64,17 @@ const WorkSlider = () => {
   return (
     <Swiper
       spaceBetween={10}
+      loop={true}
+      mousewheel={{ enabled: true }}
       pagination={{
         clickable: true,
       }}
-      modules={[Pagination]}
-      className="h-[250px] xs:h-[310px] sm:h-[400px] md:h-[470px] lg:h-[580px] xl:h-[480px]"
+      modules={[Pagination, Mousewheel]}
     >
       {workSlider.slides.map((slide, index) => {
         return (
           <SwiperSlide key={index}>
-            <div className="grid grid-cols-2 grid-rows-2 gap-4 cursor-pointer">
+            <div className="grid grid-cols-2 grid-rows-2 gap-4 cursor-pointer mb-10 3xl:mb-12">
               {slide.images.map((image, index) => {
                 return (
                   <a
@@ -84,18 +86,22 @@ const WorkSlider = () => {
                     <div className="flex items-center justify-center relative overflow-hidden group">
                       <Image
                         src={image.path}
-                        width={500}
-                        height={300}
+                        width={1280}
+                        height={720}
                         alt={image.title}
                       />
                       <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#e838cc] to-[#4a22bd] opacity-0 group-hover:opacity-80 transition-all duration-700"></div>
-                      <div className="absolute bottom-0 translate-y-full group-hover:-translate-y-10 group-hover:xl:-translate-y-20 transition-all duration-300">
-                        <div className="flex items-center gap-x-2 text-[13px] tracking-[0.2em]">
+                      <div
+                        className="absolute bottom-0 translate-y-full transition-all duration-300 group-hover:-translate-y-7 group-hover:xs:-translate-y-12
+                        group-hover:sm:-translate-y-14 group-hover:md:-translate-y-20 group-hover:lg:-translate-y-24 group-hover:xl:-translate-y-20 group-hover:2xl:-translate-y-28 group-hover:3xl:-translate-y-32 group-hover:4xl:-translate-y-40 group-hover:5xl:-translate-y-64
+                      "
+                      >
+                        <div className="flex items-center gap-x-2 text-[8px] xs:text-sm sm:text-lg xl:text-[1vw] xl:leading-[1.8] tracking-[0.2em]">
                           <div className="delay-100">LIVE</div>
                           <div className="translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-150">
                             PROJECT
                           </div>
-                          <div className="text-xl translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-200">
+                          <div className="text-[8px] xs:text-sm sm:text-lg xl:text-[1vw] xl:leading-[1.8] translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-200">
                             <BsArrowRight />
                           </div>
                         </div>

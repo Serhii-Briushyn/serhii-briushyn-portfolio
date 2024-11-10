@@ -2,7 +2,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
-import { Pagination } from "swiper";
+import "swiper/css/mousewheel";
+import { Pagination, Mousewheel } from "swiper";
 import { SiBackendless, SiFrontendmentor } from "react-icons/si";
 import {
   RxDesktop,
@@ -59,30 +60,38 @@ const ServiceSlider = () => {
           slidesPerView: 1,
           spaceBetween: 15,
         },
-
-        640: {
+        1024: {
           slidesPerView: 2,
           spaceBetween: 15,
         },
+        1280: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
       }}
+      loop={true}
+      mousewheel={{ enabled: true }}
       pagination={{
         clickable: true,
       }}
-      modules={[Pagination]}
-      className="h-[270px] sm:h-[340px]"
+      modules={[Pagination, Mousewheel]}
     >
       {serviceData.map((item, index) => {
         return (
           <SwiperSlide key={index}>
-            <div className="bg-[rgba(65,47,123,0.15)] h-[220px] sm:h-[290px] rounded-lg px-6 py-8 flex sm:flex-col justify-between gap-x-6 sm:gap-x-0 group cursor-pointer hover:bg-[rgba(89,65,169,0.15)] transition-all duration-300">
-              <div className="text-4xl text-accent sm:mb-4">{item.icon}</div>
-              <div className="sm:mb-8 hide-scrollbar">
-                <div className="mb-2 text-lg">{item.title}</div>
-                <p className="max-w-[350px] leading-normal">
+            <div className="flex flex-col justify-between h-[192px] sm:h-[240px] lg:h[260px] xl:h-[35vh] px-5 py-3 sm:py-5 lg:p-6 3xl:p-8 4xl:p-10 5xl:p-16 bg-[rgba(65,47,123,0.15)] hover:bg-[rgba(89,65,169,0.15)] rounded-lg group cursor-pointer transition-all duration-300 hide-scrollbar mb-10 3xl:mb-12">
+              <div className="text-xl sm:text-2xl lg:text-3xl 2xl:text-4xl 3xl:text-5xl 4xl:text-6xl 5xl:text-8xl text-accent">
+                {item.icon}
+              </div>
+              <div className="hide-scrollbar">
+                <div className="text-base sm:text-xl xl:text-[1.2vw] xl:leading-[1.8] mb-2">
+                  {item.title}
+                </div>
+                <p className="text-sm sm:text-lg xl:text-[1vw] xl:leading-[1.8]">
                   {item.description}
                 </p>
               </div>
-              <div className="text-3xl">
+              <div className="text-xl sm:text-2xl lg:text-3xl 2xl:text-4xl 3xl:text-5xl 4xl:text-6xl 5xl:text-8xl flex justify-end">
                 <RxArrowTopRight className="group-hover:rotate-45 group-hover:text-accent transition-all duration-300" />
               </div>
             </div>
